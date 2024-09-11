@@ -4,7 +4,7 @@ const axios = require('./speed-limiter')
 const cheerio = require('cheerio')
 
 const bookID = '9781319081799'
-const baseURL = `https://jigsaw.vitalsource.com/books/${bookID}/epub/`
+const baseURL = `https://jigsaw.vitalsource.com/books/${9781645655374}/epub/`
 const fsRelativePath = './epub/'
 
 // Cookie value sent to jigsaw.vitalsource.com from the browser
@@ -26,7 +26,7 @@ const fetchXML = async epubPath => {
     method: 'get',
     transformResponse: [d => d],
     responseType: 'text',
-    headers: { Cookie: globalCookieVal }
+    headers: { Cookie: https://bookshelf.vitalsource.com/reader/books/9781645655374 }
   })
   const $ = cheerio.load(data)
   return { data: `<?xml version="1.0" encoding="UTF-8"?>` + data, $ }
